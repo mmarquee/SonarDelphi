@@ -45,7 +45,9 @@ public class DelphiPluginTest {
 
   @Test
   public void testExtensions() {
-    Plugin.Context context = new Plugin.Context(SonarRuntimeImpl.forSonarQube(Version.create(1, 0), SonarQubeSide.SCANNER));
+    Plugin.Context context =
+            new Plugin.Context(SonarRuntimeImpl.forSonarQube(
+                    Version.create(1, 0), SonarQubeSide.SCANNER));
     plugin.define(context);
     assertThat(context.getExtensions().size(), is(9));
   }

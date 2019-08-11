@@ -22,17 +22,12 @@
  */
 package org.sonar.plugins.delphi.metrics;
 
-import org.antlr.runtime.RecognitionException;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
-import org.mockito.Matchers;
-import org.mockito.invocation.InvocationOnMock;
-import org.mockito.stubbing.Answer;
 import org.sonar.api.batch.rule.ActiveRules;
 import org.sonar.api.batch.rule.internal.ActiveRulesBuilder;
 import org.sonar.api.batch.sensor.internal.SensorContextTester;
-import org.sonar.api.issue.Issuable;
 import org.sonar.api.issue.Issue;
 import org.sonar.plugins.delphi.DelphiTestUtils;
 import org.sonar.plugins.delphi.antlr.analyzer.ASTAnalyzer;
@@ -73,7 +68,6 @@ public class DeadCodeMetricsTest {
   private List<ClassInterface> classes;
   private List<FunctionInterface> functions;
   private SensorContextTester sensorContext;
-  private Issuable issuable;
   private final List<Issue> issues = new ArrayList<>();
   private ActiveRules activeRules;
   private File baseDir;

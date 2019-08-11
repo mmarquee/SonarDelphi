@@ -67,7 +67,6 @@ public class DelphiSensorTest {
 
   @Before
   public void init() throws IOException {
-
     baseDir = DelphiUtils.getResource(ROOT_NAME);
 
     // get all directories
