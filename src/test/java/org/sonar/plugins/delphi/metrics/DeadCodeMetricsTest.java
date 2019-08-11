@@ -117,8 +117,10 @@ public class DeadCodeMetricsTest {
     sensorContext = SensorContextTester.create(baseDir);
 
     ActiveRulesBuilder rulesBuilder = new ActiveRulesBuilder();
-    rulesBuilder.create(DeadCodeMetrics.RULE_KEY_UNUSED_FUNCTION).setLanguage(DelphiLanguage.KEY).activate();
-    rulesBuilder.create(DeadCodeMetrics.RULE_KEY_UNUSED_UNIT).setLanguage(DelphiLanguage.KEY).activate();
+//    rulesBuilder.create(DeadCodeMetrics.RULE_KEY_UNUSED_FUNCTION)
+//    .setLanguage(DelphiLanguage.KEY).activate();
+//    rulesBuilder.create(DeadCodeMetrics.RULE_KEY_UNUSED_UNIT).setLanguage
+//    (DelphiLanguage.KEY).activate();
     activeRules = rulesBuilder.build();
 
     metrics = new DeadCodeMetrics(activeRules, sensorContext);
